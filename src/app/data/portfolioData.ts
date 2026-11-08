@@ -2,7 +2,7 @@
 // Replace this placeholder content with actual content from your Notion portfolio
 
 import portraitImage from 'figma:asset/42248f5a4de5b0e6e3b0c332fbf5ea385c1cceee.png';
-import alatThumbnailNew from 'figma:asset/c228f9755d6e55bc757e9b55576cdbc6a05e1cde.png';
+import alatThumbnailNew from '../../../assets/alat-dribble.png';
 import alatExistingDesign from 'figma:asset/bb8115df92e33b16bb3fbc42c93c39d2965f0939.png';
 import alatFinalDesign from 'figma:asset/2b9f9f3244e1855ad4b19bbaa5c214241b2c72b0.png';
 import myBupaThumbnail from 'figma:asset/54e92fb0387120ccb877e2d15c72b2a3a393804e.png';
