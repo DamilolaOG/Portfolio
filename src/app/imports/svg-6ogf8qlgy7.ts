@@ -1,0 +1,3 @@
+export default {
+p14b4f200: "M117 0L0 114L125 244L156 48L117 0Z",
+}

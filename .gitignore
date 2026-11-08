@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.cache/
+.vite/
+vite.config.*.timestamp-*
+*.tsbuildinfo
+
+# Environment variables — never commit secrets
+.env
+.env.*
+!.env.example
+
+# Cloudflare local dev output
+.wrangler/
+
+# macOS
+.DS_Store
+*.DS_Store
+
+# Logs
+*.log
+*-debug.log*
+logs/
+
+# Figma Make platform state (not project source)
+/.figma/design-context/
+/.plugins/
+/.opencode-skills/
+
+# Claude Code
+.claude-replay.*
+.tmp-*

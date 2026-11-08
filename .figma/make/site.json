@@ -1,0 +1,17 @@
+{
+  "title": "Damilola Odulesi — Senior Product Designer",
+  "description": "Senior product designer with 7+ years of experience creating user-centred digital experiences across health tech, fintech, and media. Currently at Sky.",
+  "robots": {
+    "index": true
+  },
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "openGraph": {
+    "image": "https://damilolaodulesi.com/social-image.png"
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

@@ -1,0 +1,15 @@
+# Normalise line endings to LF on checkin
+* text=auto eol=lf
+
+# Treat binary assets as binary (no diff, no merge)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.pdf  binary
