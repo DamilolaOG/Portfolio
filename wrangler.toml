@@ -1,0 +1,5 @@
+name = "dami-portfolio"
+pages_build_output_dir = "dist"
+
+[build]
+command = "pnpm run build"
