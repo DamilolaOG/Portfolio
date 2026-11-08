@@ -2,6 +2,7 @@
   "name": "dami-portfolio",
   "compatibility_date": "2026-11-04",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
   }
 }
