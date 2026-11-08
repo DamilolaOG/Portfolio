@@ -136,7 +136,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Manrope', Arial, sans-serif;
+    font-family: 'Mona Sans Variable', Arial, sans-serif;
   }
 }
 
