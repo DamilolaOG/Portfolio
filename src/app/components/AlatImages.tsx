@@ -1,4 +1,4 @@
-import alatExistingDesign from 'figma:asset/bb8115df92e33b16bb3fbc42c93c39d2965f0939.png';
+import alatExistingDesign from '../../../assets/Alat-old-dribble.png';
 import alatFinalDesign from '../../../assets/alat2-dribble.png';
 import alatThumbnailNew from 'figma:asset/ab221121894dbb1376622316d44229f03547f45b.png';
 
