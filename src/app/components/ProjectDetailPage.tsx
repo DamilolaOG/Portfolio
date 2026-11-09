@@ -189,6 +189,7 @@ export function ProjectDetailPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <h3 className="text-neutral-900 mb-6">Existing design</h3>
               <div className="rounded-3xl overflow-hidden bg-white">
                 <img
                   src={alatImages.existingDesign}
@@ -205,6 +206,7 @@ export function ProjectDetailPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
+              <h3 className="text-neutral-900 mb-6">New design</h3>
               <div className="rounded-3xl overflow-hidden bg-white">
                 <img
                   src={alatImages.finalDesign}
