@@ -17,7 +17,7 @@ export function FlouraCTA() {
           {/* Left Column - Text Content */}
           <div>
             <h2 className="text-[32px] lg:text-[48px] font-semibold text-neutral-900 mb-6 leading-tight">
-              Currently building Floura, exploring how AI could help with mental health support
+              Currently building Floura, exploring how AI could support mental health
             </h2>
             <p className="text-neutral-600 text-[16px] lg:text-[18px] mb-8 leading-relaxed">
               Every minute counts when someone needs mental health support. I founded Floura to explore how AI technology could help anyone access immediate, compassionate mental health support.
