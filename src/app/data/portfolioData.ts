@@ -8,7 +8,7 @@ import alatFinalDesign from 'figma:asset/2b9f9f3244e1855ad4b19bbaa5c214241b2c72b
 import myBupaThumbnail from '../../../assets/bupa-1.png';
 import bupabluaWireframes from 'figma:asset/88d828453c6e0c9bc5f28dbc6ddffaebe428cc68.png';
 import bupa2Image from '../../../assets/bupa-2.png';
-import bupaCoUkThumbnail from 'figma:asset/60e442b29e8990e1ed9501d0831d08d415f02df3.png';
+import bupaCoUkThumbnail from '../../../assets/bupa-web.png';
 import bupaCoUkBeforeAfter from 'figma:asset/c58655c30c652b84bc711ef3bb67498119c70f6d.png';
 
 export interface Project {
