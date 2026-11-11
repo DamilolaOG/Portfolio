@@ -5,7 +5,7 @@ import portraitImage from 'figma:asset/42248f5a4de5b0e6e3b0c332fbf5ea385c1cceee.
 import alatThumbnailNew from '../../../assets/alat-dribble.png';
 import alatExistingDesign from 'figma:asset/bb8115df92e33b16bb3fbc42c93c39d2965f0939.png';
 import alatFinalDesign from 'figma:asset/2b9f9f3244e1855ad4b19bbaa5c214241b2c72b0.png';
-import myBupaThumbnail from 'figma:asset/54e92fb0387120ccb877e2d15c72b2a3a393804e.png';
+import myBupaThumbnail from '../../../assets/bupa-1.png';
 import bupabluaWireframes from 'figma:asset/88d828453c6e0c9bc5f28dbc6ddffaebe428cc68.png';
 import bupaCoUkThumbnail from 'figma:asset/60e442b29e8990e1ed9501d0831d08d415f02df3.png';
 import bupaCoUkBeforeAfter from 'figma:asset/c58655c30c652b84bc711ef3bb67498119c70f6d.png';
