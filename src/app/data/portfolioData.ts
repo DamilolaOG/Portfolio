@@ -70,7 +70,7 @@ export const projects: Project[] = [
     id: '3',
     title: 'Bupa',
     slug: 'bupa-blua-engagement',
-    oneLiner: 'Improving wellbeing engagement through gamification',
+    oneLiner: 'Improving the Bupa app\'s wellbeing engagement by 112% through gamification',
     thumbnail: myBupaThumbnail,
     role: 'Senior Product Designer',
     timeline: '4 months (2023 - 2024)',
