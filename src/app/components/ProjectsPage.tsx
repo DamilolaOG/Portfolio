@@ -88,9 +88,11 @@ export function ProjectsPage() {
                     <h3 className="text-[32px] lg:text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
                       {project.oneLiner}
                     </h3>
-                    <p className="text-[16px] text-neutral-600 mb-8 leading-relaxed">
-                      {project.homePageSummary || project.problem}
-                    </p>
+                    <div className="text-[16px] text-neutral-600 mb-8 leading-relaxed space-y-4">
+                      {(project.homePageSummary || project.problem).split('\n\n').map((para, i) => (
+                        <p key={i}>{para}</p>
+                      ))}
+                    </div>
                     <Link
                       to={`/project/${project.slug}`}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white transition-colors mb-4"
