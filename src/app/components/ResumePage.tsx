@@ -53,8 +53,10 @@ export function ResumePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative pl-8 border-l-2 border-neutral-200"
+                className="relative pl-8"
               >
+                {/* Timeline line — starts at dot top so it doesn't peek above */}
+                <div className="absolute left-0 top-[8px] bottom-0 w-[2px] bg-neutral-200" />
                 {/* Timeline dot */}
                 <div className="absolute -left-[9px] top-[8px] w-4 h-4 rounded-full bg-neutral-900" />
                 
