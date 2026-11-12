@@ -38,7 +38,7 @@ export function ProjectsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-32"
+              className="mb-16 lg:mb-32"
             >
               {/* Project Image */}
               <Link to={`/project/${project.slug}`} className="block mb-12">

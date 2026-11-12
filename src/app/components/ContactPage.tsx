@@ -106,7 +106,7 @@ export function ContactPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-10 lg:mb-20"
         >
           <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-6">Let's Work Together</h1>
           <p className="text-neutral-600 max-w-2xl mx-auto">
@@ -114,7 +114,7 @@ export function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Contact Info */}
           <div className="space-y-12">
             <motion.div

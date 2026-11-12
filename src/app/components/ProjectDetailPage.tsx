@@ -35,7 +35,7 @@ export function ProjectDetailPage() {
       </div>
 
       {/* Project Header */}
-      <section className="max-w-6xl mx-auto px-6 lg:px-12 mb-20">
+      <section className="max-w-6xl mx-auto px-6 lg:px-12 mb-10 lg:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export function ProjectDetailPage() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-7xl mx-auto px-6 lg:px-12 mb-24"
+        className="max-w-7xl mx-auto px-6 lg:px-12 mb-10 lg:mb-24"
       >
         <div className={`rounded-3xl relative ${
           slug === 'bupa-blua-engagement' ? 'bg-[#DDEEF8]' :
@@ -85,8 +85,8 @@ export function ProjectDetailPage() {
       </motion.section>
 
       {/* Problem & Goal */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-[60px]">
-        <div className="grid md:grid-cols-2 gap-16">
+      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-10 lg:mb-[60px]">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export function ProjectDetailPage() {
       </section>
 
       {/* Process */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-24">
+      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-12 lg:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export function ProjectDetailPage() {
           </motion.div>
         )}
 
-        <div className="space-y-16">
+        <div className="space-y-8 lg:space-y-16">
           {/* Research */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export function ProjectDetailPage() {
       </section>
 
       {/* Visual Gallery */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-24">
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 mb-12 lg:mb-24">
         {slug === 'alat-onboarding-redesign' ? (
           <div className="space-y-16">
             {/* Existing Design */}
@@ -249,7 +249,7 @@ export function ProjectDetailPage() {
       </section>
 
       {/* Results */}
-      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-32">
+      <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-16 lg:mb-32">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -278,7 +278,7 @@ export function ProjectDetailPage() {
 
       {/* Full Case Study CTA - For ALAT, Bupa Blua, and Bupa .co.uk projects */}
       {(slug === 'alat-onboarding-redesign' || slug === 'bupa-blua-engagement' || slug === 'bupa-couk-mega-menu') && (
-        <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-32">
+        <section className="max-w-4xl mx-auto px-6 lg:px-12 mb-16 lg:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

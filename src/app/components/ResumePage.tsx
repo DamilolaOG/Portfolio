@@ -13,7 +13,7 @@ export function ResumePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 lg:mb-16"
         >
           <div className="flex justify-end mb-6">
             <Button
@@ -36,7 +36,7 @@ export function ResumePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-20"
+          className="mb-10 lg:mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
@@ -87,7 +87,7 @@ export function ResumePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-10 lg:mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
@@ -121,7 +121,7 @@ export function ResumePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-10 lg:mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
