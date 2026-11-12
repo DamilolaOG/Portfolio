@@ -9,7 +9,7 @@ export function generateResumePDF() {
   const contentWidth = pageWidth - 2 * margin;
   let y = 26;
 
-  const checkPage = (needed = 12) => {
+  const checkPage = (needed = 14) => {
     if (y + needed > pageHeight - margin) {
       doc.addPage();
       y = 26;
@@ -34,10 +34,10 @@ export function generateResumePDF() {
   };
 
   const sectionHeading = (title: string) => {
-    checkPage(16);
-    style(10.5, 'bold', 25, 25, 25);
+    checkPage(18);
+    style(12.5, 'bold', 25, 25, 25);
     doc.text(title, margin, y);
-    y += 4;
+    y += 5;
     doc.setDrawColor(210, 210, 210);
     doc.setLineWidth(0.3);
     doc.line(margin, y, pageWidth - margin, y);
@@ -45,32 +45,32 @@ export function generateResumePDF() {
   };
 
   // ── Header ───────────────────────────────────────────────────────────────
-  style(24, 'bold', 15, 15, 15);
+  style(26, 'bold', 15, 15, 15);
   doc.text(bio.name, margin, y);
-  y += 9;
+  y += 10;
 
-  style(11, 'normal', 90, 90, 90);
+  style(13, 'normal', 90, 90, 90);
   doc.text(bio.tagline, margin, y);
-  y += 5.5;
+  y += 6.5;
 
-  style(9.5, 'normal', 120, 120, 120);
+  style(11.5, 'normal', 120, 120, 120);
   doc.text('London, UK', margin, y);
 
-  // Right-aligned contact info
+  // Right-aligned contact info — blue
   const contacts = [
     'www.damilolaodulesi.com',
     'damilolaodulesi@gmail.com',
     'linkedin.com/in/damilola-odulesi',
   ];
-  style(9, 'normal', 90, 90, 90);
+  style(11, 'normal', 37, 99, 235);
   let contactY = 26;
   contacts.forEach(text => {
     const w = doc.getTextWidth(text);
     doc.text(text, pageWidth - margin - w, contactY);
-    contactY += 5;
+    contactY += 6;
   });
 
-  y += 9;
+  y += 10;
 
   // Header divider
   doc.setDrawColor(170, 170, 170);
@@ -80,31 +80,31 @@ export function generateResumePDF() {
 
   // ── Professional summary ─────────────────────────────────────────────────
   sectionHeading('Professional summary');
-  style(10, 'normal', 65, 65, 65);
-  wrappedText(bio.fullBio, margin, contentWidth, 5.2);
+  style(12, 'normal', 65, 65, 65);
+  wrappedText(bio.fullBio, margin, contentWidth, 6.2);
   space(10);
 
   // ── Experience ───────────────────────────────────────────────────────────
   sectionHeading('Experience');
 
   resume.experience.forEach((job, index) => {
-    checkPage(22);
+    checkPage(24);
 
     // Title (left) + Period (right) on same line
-    style(11, 'bold', 25, 25, 25);
+    style(13, 'bold', 25, 25, 25);
     doc.text(job.title, margin, y);
-    style(9, 'normal', 130, 130, 130);
+    style(11, 'normal', 130, 130, 130);
     const periodW = doc.getTextWidth(job.period);
     doc.text(job.period, pageWidth - margin - periodW, y);
-    y += 5.5;
+    y += 6.5;
 
-    style(10, 'normal', 90, 90, 90);
+    style(12, 'normal', 90, 90, 90);
     doc.text(`${job.company} · ${job.location}`, margin, y);
     y += 10;
 
-    style(10, 'normal', 65, 65, 65);
+    style(12, 'normal', 65, 65, 65);
     job.description.forEach(item => {
-      wrappedText(`• ${item}`, margin, contentWidth, 5);
+      wrappedText(`• ${item}`, margin, contentWidth, 6);
       space(1.5);
     });
 
@@ -123,24 +123,24 @@ export function generateResumePDF() {
   sectionHeading('Education');
 
   resume.education.forEach((edu, index) => {
-    checkPage(18);
+    checkPage(20);
 
-    style(11, 'bold', 25, 25, 25);
+    style(13, 'bold', 25, 25, 25);
     doc.text(edu.degree, margin, y);
-    style(9, 'normal', 130, 130, 130);
+    style(11, 'normal', 130, 130, 130);
     const periodW = doc.getTextWidth(edu.period);
     doc.text(edu.period, pageWidth - margin - periodW, y);
-    y += 5.5;
+    y += 6.5;
 
-    style(10, 'normal', 90, 90, 90);
+    style(12, 'normal', 90, 90, 90);
     doc.text(edu.school, margin, y);
-    y += 5;
+    y += 6;
 
-    style(10, 'normal', 110, 110, 110);
+    style(12, 'normal', 110, 110, 110);
     doc.text(edu.description, margin, y);
 
     if (index < resume.education.length - 1) {
-      space(8);
+      space(9);
     }
   });
 
@@ -148,21 +148,21 @@ export function generateResumePDF() {
 
   // ── Skills & expertise ───────────────────────────────────────────────────
   sectionHeading('Skills & expertise');
-  style(10, 'normal', 65, 65, 65);
-  wrappedText(bio.skills.map(s => s.name).join('  ·  '), margin, contentWidth, 5.2);
+  style(12, 'normal', 65, 65, 65);
+  wrappedText(bio.skills.map(s => s.name).join('  ·  '), margin, contentWidth, 6.2);
   space(10);
 
   // ── Tools & technologies ─────────────────────────────────────────────────
   sectionHeading('Tools & technologies');
-  style(10, 'normal', 65, 65, 65);
-  wrappedText(bio.tools.join('  ·  '), margin, contentWidth, 5.2);
+  style(12, 'normal', 65, 65, 65);
+  wrappedText(bio.tools.join('  ·  '), margin, contentWidth, 6.2);
   space(10);
 
   // ── Achievements ─────────────────────────────────────────────────────────
   sectionHeading('Achievements');
-  style(10, 'normal', 65, 65, 65);
+  style(12, 'normal', 65, 65, 65);
   resume.achievements.forEach(item => {
-    wrappedText(`• ${item}`, margin, contentWidth, 5);
+    wrappedText(`• ${item}`, margin, contentWidth, 6);
     space(1.5);
   });
 
