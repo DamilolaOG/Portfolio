@@ -19,7 +19,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen" style={{ backgroundImage: "linear-gradient(149.852deg, rgb(250, 250, 250) 0%, rgb(255, 255, 255) 50%, rgb(245, 245, 245) 100%)" }}>
       {/* Hero Section */}
-      <section className="relative min-h-[520px] md:h-[867px] flex flex-col overflow-hidden pb-16 md:pb-0" style={{ paddingTop: '30px' }}> {/* Navigation - reduced from 34px to 30px (4px less) */}
+      <section className="relative min-h-[520px] md:h-[867px] flex flex-col overflow-hidden pb-16 md:pb-0"> {/* Navigation - reduced from 34px to 30px (4px less) */}
         <Navigation />
         
         {/* Floating elements for visual interest */}
@@ -51,7 +51,7 @@ export function HomePage() {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full mt-[82px] lg:mt-[106px]"> {/* Increased from mt-[94px] to 106px (94 + 12) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full mt-[112px] lg:mt-[136px]"> {/* Increased from mt-[94px] to 106px (94 + 12) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

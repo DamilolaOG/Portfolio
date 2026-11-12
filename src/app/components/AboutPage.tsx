@@ -20,7 +20,7 @@ export function AboutPage() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h1 className="text-neutral-900 mb-6">About Me</h1>
+          <h1 className="text-[58px] md:text-[64px] font-semibold text-neutral-900 mb-6">About Me</h1>
           <p className="text-neutral-600 max-w-3xl">
             Senior product designer with over 7 years of experience leading high-impact user experience strategies across diverse B2C and B2B environments.
           </p>
