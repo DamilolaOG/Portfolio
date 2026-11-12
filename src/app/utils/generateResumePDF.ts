@@ -99,12 +99,12 @@ export function generateResumePDF() {
     y += 5.5;
 
     style(10, 'normal', 90, 90, 90);
-    doc.text(`${job.company}  ·  ${job.location}`, margin, y);
-    y += 7;
+    doc.text(`${job.company} · ${job.location}`, margin, y);
+    y += 2;
 
     style(10, 'normal', 65, 65, 65);
     job.description.forEach(item => {
-      wrappedText(`• ${item}`, margin + 3, contentWidth - 3, 5);
+      wrappedText(`• ${item}`, margin, contentWidth, 5);
       space(1.5);
     });
 
@@ -162,7 +162,7 @@ export function generateResumePDF() {
   sectionHeading('Achievements');
   style(10, 'normal', 65, 65, 65);
   resume.achievements.forEach(item => {
-    wrappedText(`• ${item}`, margin + 3, contentWidth - 3, 5);
+    wrappedText(`• ${item}`, margin, contentWidth, 5);
     space(1.5);
   });
 
