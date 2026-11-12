@@ -102,7 +102,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'ALAT by WEMA',
     slug: 'alat-onboarding-redesign',
-    oneLiner: 'Reducing friction in digital bank onboarding to boost conversions',
+    oneLiner: 'Reducing signup friction to boost customer acquisition by 35%',
     thumbnail: alatThumbnailNew,
     role: 'Lead Product Designer',
     timeline: '18 months (Jun 2021 - Dec 2022)',
