@@ -24,9 +24,9 @@ export function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="pt-28 lg:pt-32 pb-20"
+          className="pt-28 pb-20"
         >
-          <h1 className="text-[32px] lg:text-[64px] text-neutral-900">Projects</h1>
+          <h1 className="text-neutral-900 mb-6">Projects</h1>
         </motion.div>
 
         {/* Projects - Editorial Layout */}
@@ -38,7 +38,7 @@ export function ProjectsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-16 lg:mb-32"
+              className="mb-32"
             >
               {/* Project Image */}
               <Link to={`/project/${project.slug}`} className="block mb-12">
@@ -72,7 +72,7 @@ export function ProjectsPage() {
 
               {/* Project Details - Two Column Layout */}
               <div>
-                <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-16">
                   {/* Left Column - Project Meta */}
                   <div className="pt-[3px]">
                     <h4 className="text-[14px] font-semibold text-neutral-900 uppercase tracking-wide mb-2 leading-[1.2]">
@@ -85,7 +85,7 @@ export function ProjectsPage() {
 
                   {/* Right Column - Project Content */}
                   <div>
-                    <h3 className="text-[32px] lg:text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
+                    <h3 className="text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
                       {project.oneLiner}
                     </h3>
                     <div className="text-[16px] text-neutral-600 mb-8 leading-relaxed space-y-4">
@@ -107,7 +107,7 @@ export function ProjectsPage() {
           ))}
 
           {/* Floura CTA */}
-          <div className="col-span-full mb-16">
+          <div className="-mx-6 lg:-mx-12 mb-16">
             <FlouraCTA />
           </div>
 
@@ -146,7 +146,7 @@ export function ProjectsPage() {
           transition={{ duration: 0.6 }}
           className="pt-16 pb-24 border-t border-neutral-200 text-center"
         >
-          <h2 className="text-[24px] lg:text-[36px] text-neutral-900 mb-6">Let's Work Together</h2>
+          <h2 className="text-neutral-900 mb-6">Let's Work Together</h2>
           <p className="text-neutral-600 mb-8 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>

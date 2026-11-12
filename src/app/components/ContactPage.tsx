@@ -99,22 +99,22 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen pt-28 lg:pt-32 pb-24 px-6 lg:px-12">
+    <div className="min-h-screen pt-32 pb-24 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 lg:mb-20"
+          className="text-center mb-20"
         >
-          <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-6">Let's Work Together</h1>
+          <h1 className="text-neutral-900 mb-6">Let's Work Together</h1>
           <p className="text-neutral-600 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
           <div className="space-y-12">
             <motion.div
@@ -122,7 +122,7 @@ export function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h2 className="text-[24px] lg:text-[36px] text-neutral-900 mb-6">Get in Touch</h2>
+              <h2 className="text-neutral-900 mb-6">Get in Touch</h2>
               <div className="space-y-4">
                 {/* Email */}
                 <a

@@ -197,16 +197,6 @@
   }
 }
 
-/* Mobile type scale — override CSS vars below 768px */
-@media (max-width: 767px) {
-  :root {
-    --text-5xl: 2rem;    /* h1: 32px  (was 64px) */
-    --text-4xl: 1.75rem; /* 28px      (was 48px) */
-    --text-3xl: 1.5rem;  /* h2: 24px  (was 36px) */
-    --text-2xl: 1.25rem; /* 20px      (was 30px) */
-    --text-xl: 1.125rem; /* h3: 18px  (was 24px) */
-  }
-}
 
 html {
   font-size: var(--font-size);

@@ -6,29 +6,27 @@ import { generateResumePDF } from '../utils/generateResumePDF';
 
 export function ResumePage() {
   return (
-    <div className="min-h-screen pt-28 lg:pt-32 pb-24 px-6 lg:px-12">
+    <div className="min-h-screen pt-28 pb-24 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 lg:mb-16"
+          className="mb-16"
         >
-          <div className="flex justify-end mb-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <Button
               onClick={generateResumePDF}
-              className="bg-neutral-900 hover:bg-neutral-700 text-white rounded-full px-6"
+              className="bg-neutral-900 hover:bg-neutral-700 text-white rounded-full px-6 self-start mb-6 md:mb-0 md:order-last md:ml-6 md:shrink-0"
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume
             </Button>
+            <h1 className="text-neutral-900">{bio.name}</h1>
           </div>
-          <div>
-            <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-4">{bio.name}</h1>
-            <p className="text-neutral-600">{bio.tagline}</p>
-            <p className="text-neutral-500">London, UK</p>
-          </div>
+          <p className="text-neutral-600">{bio.tagline}</p>
+          <p className="text-neutral-500">London, UK</p>
         </motion.div>
 
         {/* Experience Section */}
@@ -36,13 +34,13 @@ export function ResumePage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-10 lg:mb-20"
+          className="mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <Briefcase className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Experience</h2>
+            <h2 className="text-neutral-900">Experience</h2>
           </div>
 
           <div className="space-y-12">
@@ -87,13 +85,13 @@ export function ResumePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-10 lg:mb-20"
+          className="mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Education</h2>
+            <h2 className="text-neutral-900">Education</h2>
           </div>
 
           <div className="space-y-8">
@@ -121,13 +119,13 @@ export function ResumePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-10 lg:mb-20"
+          className="mb-20"
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <Award className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Achievements & Recognition</h2>
+            <h2 className="text-neutral-900">Achievements & Recognition</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -154,7 +152,7 @@ export function ResumePage() {
           transition={{ duration: 0.6 }}
           className="pt-16 border-t border-neutral-200 text-center"
         >
-          <h2 className="text-[24px] lg:text-[36px] text-neutral-900 mb-6">Interested in working together?</h2>
+          <h2 className="text-neutral-900 mb-6">Interested in working together?</h2>
           <Button
             asChild
             className="bg-neutral-900 hover:bg-neutral-700 text-white rounded-full px-8 py-6"

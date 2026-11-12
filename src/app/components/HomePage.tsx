@@ -19,7 +19,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen" style={{ backgroundImage: "linear-gradient(149.852deg, rgb(250, 250, 250) 0%, rgb(255, 255, 255) 50%, rgb(245, 245, 245) 100%)" }}>
       {/* Hero Section */}
-      <section className="relative min-h-[520px] md:h-[867px] flex flex-col overflow-hidden pb-12 md:pb-0" style={{ paddingTop: '30px' }}> {/* Navigation - reduced from 34px to 30px (4px less) */}
+      <section className="relative h-[867px] flex flex-col overflow-hidden" style={{ paddingTop: '30px' }}> {/* Navigation - reduced from 34px to 30px (4px less) */}
         <Navigation />
         
         {/* Floating elements for visual interest */}
@@ -51,22 +51,22 @@ export function HomePage() {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full mt-[90px] lg:mt-[106px]"> {/* Increased from mt-[94px] to 106px (94 + 12) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full mt-[106px]"> {/* Increased from mt-[94px] to 106px (94 + 12) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col gap-5"
           >
-            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               Hello there 👋🏽, I'm Dami.
             </h1>
             
-            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               I design experiences that feel easy to use,<br />yet drive business outcomes.
             </h1>
             
-            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               I'm currently a senior product designer at{' '}
               <span
                 className="inline-block text-transparent"
@@ -95,7 +95,7 @@ export function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-16 lg:mb-32"
+              className="mb-32"
             >
               {/* Project Image */}
               <Link to={`/project/${project.slug}`} className="block mb-12">
@@ -129,7 +129,7 @@ export function HomePage() {
 
               {/* Project Details - Two Column Layout */}
               <div>
-                <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 lg:gap-16"> {/* Left Column - Project Meta */}
+                <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-16"> {/* Left Column - Project Meta */}
                   <div className="pt-[3px]">
                     <h4 className="text-[14px] font-semibold text-neutral-900 uppercase tracking-wide mb-2 leading-[1.2]">
                       {project.title}
@@ -141,7 +141,7 @@ export function HomePage() {
 
                   {/* Right Column - Project Content */}
                   <div>
-                    <h3 className="text-[32px] lg:text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
+                    <h3 className="text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
                       {project.oneLiner}
                     </h3>
                     <div className="text-[16px] text-neutral-600 mb-8 leading-relaxed space-y-4">

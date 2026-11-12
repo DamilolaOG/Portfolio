@@ -16,10 +16,10 @@ export function FlouraCTA() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="order-2 lg:order-1">
-            <h2 className="text-[32px] lg:text-[48px] font-semibold text-neutral-900 mb-6 leading-tight">
+            <h2 className="text-[48px] font-semibold text-neutral-900 mb-6 leading-tight">
               Currently building Floura, exploring how AI could support mental health
             </h2>
-            <p className="text-neutral-600 text-[16px] lg:text-[18px] mb-8 leading-relaxed">
+            <p className="text-neutral-600 text-[18px] mb-8 leading-relaxed">
               Every minute counts when someone needs mental health support. I founded Floura to explore how AI technology could help anyone access immediate, compassionate mental health support.
             </p>
             <a
@@ -40,7 +40,7 @@ export function FlouraCTA() {
             <img
               src={flouraAppImage}
               alt="Floura app interface showing AI therapist conversation"
-              className="w-full max-w-[240px] lg:max-w-[320px] h-auto mix-blend-multiply"
+              className="w-full max-w-[320px] h-auto mix-blend-multiply"
             />
           </div>
         </div>
