@@ -56,7 +56,7 @@ export function ResumePage() {
                 className="relative pl-8"
               >
                 {/* Timeline line — starts at dot top so it doesn't peek above */}
-                <div className="absolute left-0 top-[8px] bottom-0 w-[2px] bg-neutral-200" />
+                <div className="absolute -left-[2px] top-[8px] bottom-0 w-[2px] bg-neutral-200" />
                 {/* Timeline dot */}
                 <div className="absolute -left-[9px] top-[8px] w-4 h-4 rounded-full bg-neutral-900" />
                 
