@@ -39,7 +39,7 @@ export const projects: Project[] = [
     id: '4',
     title: 'Bupa .co.uk',
     slug: 'bupa-couk-mega-menu',
-    oneLiner: 'Redesigning how people discover and engage with Bupa products',
+    oneLiner: 'Increasing the discovery of Bupa products by 26% with improved navigation',
     thumbnail: bupaCoUkThumbnail,
     role: 'Senior Product Designer',
     timeline: '8 weeks (2024)',
