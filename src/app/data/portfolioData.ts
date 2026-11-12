@@ -68,14 +68,14 @@ export const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'MyBupa',
+    title: 'Bupa',
     slug: 'bupa-blua-engagement',
     oneLiner: 'Improving wellbeing engagement through gamification',
     thumbnail: myBupaThumbnail,
     role: 'Senior Product Designer',
     timeline: '4 months (2023 - 2024)',
     category: 'Health Tech • Mobile App • B2B2C',
-    homePageSummary: 'MyBupa members were opening the app for about 2 minutes, and fewer than 1% came back daily. For an insurer, members who don\'t engage are less likely to renew. I led the design of a gamified wellbeing experience (leagues, streaks and personalised health insights) that gave members a reason to come back every day.\n\nThe result: daily engagement up 112% and NPS up from 46 to 68.',
+    homePageSummary: 'MyBupa app users were opening the app for about 2 minutes, and fewer than 1% came back daily. For an insurer, members who don\'t engage are less likely to renew. I led the design of a gamified wellbeing experience (leagues, streaks and personalised health insights) that gave members a reason to come back every day.\n\nThe result: daily engagement up 112% and NPS up from 46 to 68.',
     problem: 'BUPA\'s Blua wellbeing proposition within the MyBupa app was experiencing critically low customer engagement and retention. With an average session duration of only 2 minutes, less than 1% of 4M+ accounts as daily active users, and a below-average NPS of 46 (with comments describing the app as "pretty basic"), the digital product was failing to deliver value and drive meaningful health outcomes. The small fraction of returning users indicated low satisfaction and ineffective UX that didn\'t motivate users to engage with wellbeing programmes or return to the app regularly.',
     goal: 'Increase user engagement and satisfaction by redesigning the Blua experience to be more motivating, accessible, and valuable. Success would be measured by: increasing daily engagement by 1% (from 0.7% to 1.7%), boosting average session duration by 150% (from 2 mins to 5 mins), improving NPS by 23 points, and increasing task completion rates for wellbeing programmes.',
     process: {
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     role: 'Lead Product Designer',
     timeline: '18 months (Jun 2021 - Dec 2022)',
     category: 'Fintech • Mobile Banking',
-    homePageSummary: '71% of complaints were onboarding-related, 5+ minute signup killed conversions. Implemented BVN auto-population and streamlined flow. Result: 35% acquisition growth (600k to 810k users) and 58% faster signup.',
+    homePageSummary: '71% of customer complaints came from onboarding, and signup took over 5 minutes. For a digital bank, onboarding is the shop front: every customer who drops out is lost revenue and wasted acquisition spend. I redesigned the flow around BVN auto-population, which pulls a customer\'s verified details from their Bank Verification Number so they don\'t type them in by hand, and removed the steps that weren\'t earning their place.\n\nThe result: signup 58% faster and the user base up 35%, from 600k to 810k.',
     problem: 'ALAT\'s onboarding experience was creating significant barriers to customer acquisition. Key pain points included: 71% of customer complaints were related to account setup difficulties, average signup time of 5 minutes 20 seconds was causing high abandonment rates, confusing error messages and document upload requirements frustrated users, and the lengthy data entry process with no auto-population created unnecessary friction. This directly impacted the bank\'s ability to scale and acquire new customers in a competitive digital banking market.',
     goal: 'Redesign the entire onboarding flow to create a frictionless account creation experience that reduces signup time, minimises data entry through BVN integration, provides clear guidance and error handling, and ultimately increases conversion rates while maintaining security and compliance standards.',
     process: {
