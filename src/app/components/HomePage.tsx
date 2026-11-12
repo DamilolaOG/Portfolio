@@ -58,15 +58,15 @@ export function HomePage() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col gap-5"
           >
-            <h1 className="font-semibold text-[58px] leading-[76.8px] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               Hello there 👋🏽, I'm Dami.
             </h1>
             
-            <h1 className="font-semibold text-[58px] leading-[76.8px] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               I design experiences that feel easy to use,<br />yet drive business outcomes.
             </h1>
             
-            <h1 className="font-semibold text-[58px] leading-[76.8px] tracking-[-0.7975px] text-[#171717]">
+            <h1 className="font-semibold text-[34px] lg:text-[58px] leading-[1.3] tracking-[-0.7975px] text-[#171717]">
               I'm currently a senior product designer at{' '}
               <span
                 className="inline-block text-transparent"
