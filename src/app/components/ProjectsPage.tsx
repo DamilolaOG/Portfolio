@@ -24,7 +24,7 @@ export function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="pt-28 pb-20"
+          className="pt-16 pb-20"
         >
           <h1 className="text-neutral-900 mb-6">Projects</h1>
         </motion.div>
@@ -85,7 +85,7 @@ export function ProjectsPage() {
 
                   {/* Right Column - Project Content */}
                   <div>
-                    <h3 className="text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
+                    <h3 className="text-[28px] md:text-[40px] font-semibold text-neutral-900 mb-6 leading-[1.2]">
                       {project.oneLiner}
                     </h3>
                     <div className="text-[16px] text-neutral-600 mb-8 leading-relaxed space-y-4">
