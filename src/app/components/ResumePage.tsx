@@ -56,7 +56,7 @@ export function ResumePage() {
                 className="relative pl-8 border-l-2 border-neutral-200"
               >
                 {/* Timeline dot */}
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-neutral-900" />
+                <div className="absolute -left-[9px] top-[8px] w-4 h-4 rounded-full bg-neutral-900" />
                 
                 <div className="pb-2">
                   <h3 className="text-neutral-900 mb-1">{job.title}</h3>
