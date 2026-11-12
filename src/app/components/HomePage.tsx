@@ -19,7 +19,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen" style={{ backgroundImage: "linear-gradient(149.852deg, rgb(250, 250, 250) 0%, rgb(255, 255, 255) 50%, rgb(245, 245, 245) 100%)" }}>
       {/* Hero Section */}
-      <section className="relative min-h-[867px] md:h-[867px] flex flex-col overflow-hidden pb-12 md:pb-0" style={{ paddingTop: '30px' }}> {/* Navigation - reduced from 34px to 30px (4px less) */}
+      <section className="relative min-h-[520px] md:h-[867px] flex flex-col overflow-hidden pb-12 md:pb-0" style={{ paddingTop: '30px' }}> {/* Navigation - reduced from 34px to 30px (4px less) */}
         <Navigation />
         
         {/* Floating elements for visual interest */}
