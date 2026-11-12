@@ -167,7 +167,7 @@ export const resume = {
   experience: [
     {
       title: 'Senior Product Designer',
-      company: 'SKY',
+      company: 'Sky',
       location: 'London, UK',
       period: 'May 2026 - Present',
       description: [
@@ -178,7 +178,7 @@ export const resume = {
     },
     {
       title: 'Senior Product Designer',
-      company: 'BUPA',
+      company: 'Bupa',
       location: 'London, UK',
       period: 'May 2024 - May 2026',
       description: [
@@ -190,7 +190,7 @@ export const resume = {
     },
     {
       title: 'Lead Product Designer',
-      company: 'ALAT',
+      company: 'Alat',
       location: 'Nigeria',
       period: 'Jun 2021 - May 2024',
       description: [
@@ -203,7 +203,7 @@ export const resume = {
     },
     {
       title: 'UX Analyst',
-      company: 'CITIBANK',
+      company: 'Citibank',
       location: 'Nigeria',
       period: 'Jun 2020 - May 2021',
       description: [
