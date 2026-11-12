@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
@@ -5,11 +6,13 @@ import { projects } from '../data/portfolioData';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import designProcessImage from 'figma:asset/96bc89a5de55631c119185138738874c2318f191.png';
 import { alatImages } from './AlatImages';
+import { ImageLightbox } from './ImageLightbox';
 import Group28 from '../imports/Group28-14-8127';
 
 export function ProjectDetailPage() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   if (!project) {
     return <Navigate to="/projects" replace />;
@@ -190,7 +193,10 @@ export function ProjectDetailPage() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-neutral-900 mb-6">Existing design</h3>
-              <div className="rounded-3xl overflow-hidden bg-white">
+              <div
+                className="rounded-3xl overflow-hidden bg-white cursor-zoom-in"
+                onClick={() => setLightboxSrc(alatImages.existingDesign)}
+              >
                 <img
                   src={alatImages.existingDesign}
                   alt="Existing ALAT onboarding design showing pain points"
@@ -207,7 +213,10 @@ export function ProjectDetailPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <h3 className="text-neutral-900 mb-6">New design</h3>
-              <div className="rounded-3xl overflow-hidden bg-white">
+              <div
+                className="rounded-3xl overflow-hidden bg-white cursor-zoom-in"
+                onClick={() => setLightboxSrc(alatImages.finalDesign)}
+              >
                 <img
                   src={alatImages.finalDesign}
                   alt="Redesigned ALAT onboarding with improved user experience"
@@ -225,7 +234,8 @@ export function ProjectDetailPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="rounded-3xl bg-neutral-100"
+                className="rounded-3xl bg-neutral-100 cursor-zoom-in"
+                onClick={() => setLightboxSrc(image)}
               >
                 <ImageWithFallback
                   src={image}
@@ -339,6 +349,13 @@ export function ProjectDetailPage() {
           )}
         </div>
       </section>
+      {lightboxSrc && (
+        <ImageLightbox
+          src={lightboxSrc}
+          alt="Case study image"
+          onClose={() => setLightboxSrc(null)}
+        />
+      )}
     </div>
   );
 }
