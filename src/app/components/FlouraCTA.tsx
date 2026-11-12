@@ -15,7 +15,7 @@ export function FlouraCTA() {
       >
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div>
+          <div className="order-2 lg:order-1">
             <h2 className="text-[32px] lg:text-[48px] font-semibold text-neutral-900 mb-6 leading-tight">
               Currently building Floura, exploring how AI could support mental health
             </h2>
@@ -36,7 +36,7 @@ export function FlouraCTA() {
           </div>
 
           {/* Right Column - App Image */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
             <img
               src={flouraAppImage}
               alt="Floura app interface showing AI therapist conversation"
