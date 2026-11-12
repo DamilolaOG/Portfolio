@@ -25,7 +25,7 @@ export function ResumePage() {
             </Button>
           </div>
           <div>
-            <h1 className="text-neutral-900 mb-4">{bio.name}</h1>
+            <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-4">{bio.name}</h1>
             <p className="text-neutral-600">{bio.tagline}</p>
             <p className="text-neutral-500">London, UK</p>
           </div>
@@ -42,7 +42,7 @@ export function ResumePage() {
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <Briefcase className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-neutral-900">Experience</h2>
+            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Experience</h2>
           </div>
 
           <div className="space-y-12">
@@ -93,7 +93,7 @@ export function ResumePage() {
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-neutral-900">Education</h2>
+            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Education</h2>
           </div>
 
           <div className="space-y-8">
@@ -127,7 +127,7 @@ export function ResumePage() {
             <div className="w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center">
               <Award className="w-6 h-6 text-neutral-900" />
             </div>
-            <h2 className="text-neutral-900">Achievements & Recognition</h2>
+            <h2 className="text-[22px] lg:text-[36px] text-neutral-900">Achievements & Recognition</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -154,7 +154,7 @@ export function ResumePage() {
           transition={{ duration: 0.6 }}
           className="pt-16 border-t border-neutral-200 text-center"
         >
-          <h2 className="text-neutral-900 mb-6">Interested in working together?</h2>
+          <h2 className="text-[24px] lg:text-[36px] text-neutral-900 mb-6">Interested in working together?</h2>
           <Button
             asChild
             className="bg-neutral-900 hover:bg-neutral-700 text-white rounded-full px-8 py-6"

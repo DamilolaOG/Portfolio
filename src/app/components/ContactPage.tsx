@@ -108,7 +108,7 @@ export function ContactPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h1 className="text-neutral-900 mb-6">Let's Work Together</h1>
+          <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-6">Let's Work Together</h1>
           <p className="text-neutral-600 max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
@@ -122,7 +122,7 @@ export function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h2 className="text-neutral-900 mb-6">Get in Touch</h2>
+              <h2 className="text-[24px] lg:text-[36px] text-neutral-900 mb-6">Get in Touch</h2>
               <div className="space-y-4">
                 {/* Email */}
                 <a

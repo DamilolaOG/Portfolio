@@ -41,7 +41,7 @@ export function ProjectDetailPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-neutral-900 mb-6">{project.title}</h1>
+          <h1 className="text-[32px] lg:text-[64px] text-neutral-900 mb-6">{project.title}</h1>
           <p className="text-neutral-600 mb-8 max-w-3xl">
             {project.oneLiner}
           </p>
@@ -93,7 +93,7 @@ export function ProjectDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-neutral-900 mb-4">The Problem</h3>
+            <h3 className="text-[20px] lg:text-[24px] text-neutral-900 mb-4">The Problem</h3>
             <p className="text-neutral-600">{project.problem}</p>
           </motion.div>
 
@@ -103,7 +103,7 @@ export function ProjectDetailPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="text-neutral-900 mb-4">The Goal</h3>
+            <h3 className="text-[20px] lg:text-[24px] text-neutral-900 mb-4">The Goal</h3>
             <p className="text-neutral-600">{project.goal}</p>
           </motion.div>
         </div>
@@ -117,7 +117,7 @@ export function ProjectDetailPage() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-neutral-900 mb-12">
+          <h3 className="text-[20px] lg:text-[24px] text-neutral-900 mb-12">
             {slug === 'alat-onboarding-redesign' ? 'Process - Double Diamond' : 'Process'}
           </h3>
         </motion.div>
@@ -192,7 +192,7 @@ export function ProjectDetailPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-neutral-900 mb-6">Existing design</h3>
+              <h3 className="text-[20px] lg:text-[24px] text-neutral-900 mb-6">Existing design</h3>
               <div
                 className="rounded-3xl overflow-hidden bg-white cursor-zoom-in"
                 onClick={() => setLightboxSrc(alatImages.existingDesign)}
@@ -212,7 +212,7 @@ export function ProjectDetailPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-neutral-900 mb-6">New design</h3>
+              <h3 className="text-[20px] lg:text-[24px] text-neutral-900 mb-6">New design</h3>
               <div
                 className="rounded-3xl overflow-hidden bg-white cursor-zoom-in"
                 onClick={() => setLightboxSrc(alatImages.finalDesign)}
@@ -255,7 +255,7 @@ export function ProjectDetailPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-neutral-900 mb-12"
+          className="text-[20px] lg:text-[24px] text-neutral-900 mb-12"
         >
           Results & Impact
         </motion.h3>
