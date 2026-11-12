@@ -11,7 +11,7 @@ import {
 
 export function AboutPage() {
   return (
-    <div className="min-h-screen pt-16 pb-24 px-6 lg:px-12">
+    <div className="min-h-screen pt-10 pb-24 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -20,7 +20,7 @@ export function AboutPage() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <h1 className="text-[58px] md:text-[64px] font-semibold text-neutral-900 mb-6">About Me</h1>
+          <h1 className="text-[52px] md:text-[64px] font-semibold text-neutral-900 mb-6">About Me</h1>
           <p className="text-neutral-600 max-w-3xl">
             Senior product designer with over 7 years of experience leading high-impact user experience strategies across diverse B2C and B2B environments.
           </p>

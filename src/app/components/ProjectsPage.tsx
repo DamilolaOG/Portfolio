@@ -24,9 +24,9 @@ export function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="pt-16 pb-20"
+          className="pt-10 pb-12"
         >
-          <h1 className="text-[58px] md:text-[64px] font-semibold text-neutral-900 mb-6">Projects</h1>
+          <h1 className="text-[52px] md:text-[64px] font-semibold text-neutral-900 mb-6">Projects</h1>
         </motion.div>
 
         {/* Projects - Editorial Layout */}

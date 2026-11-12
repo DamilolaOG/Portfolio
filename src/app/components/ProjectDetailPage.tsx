@@ -22,7 +22,7 @@ export function ProjectDetailPage() {
   const prevProject = projects.find((p) => p.slug === project.prevProject);
 
   return (
-    <div className="min-h-screen pt-20 pb-24">
+    <div className="min-h-screen pt-14 pb-24">
       {/* Back Button */}
       <div className="max-w-6xl mx-auto px-6 lg:px-12 mb-12">
         <Link

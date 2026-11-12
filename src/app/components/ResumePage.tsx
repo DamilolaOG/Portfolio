@@ -6,7 +6,7 @@ import { generateResumePDF } from '../utils/generateResumePDF';
 
 export function ResumePage() {
   return (
-    <div className="min-h-screen pt-16 pb-24 px-6 lg:px-12">
+    <div className="min-h-screen pt-10 pb-24 px-6 lg:px-12">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
