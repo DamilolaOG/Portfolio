@@ -100,7 +100,7 @@ export function generateResumePDF() {
 
     style(10, 'normal', 90, 90, 90);
     doc.text(`${job.company} · ${job.location}`, margin, y);
-    y += 5;
+    y += 10;
 
     style(10, 'normal', 65, 65, 65);
     job.description.forEach(item => {
