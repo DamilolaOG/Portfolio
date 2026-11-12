@@ -4,168 +4,167 @@ import { resume, bio } from '../data/portfolioData';
 export function generateResumePDF() {
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
-  const margin = 20;
-  let yPosition = 20;
+  const pageHeight = doc.internal.pageSize.getHeight();
+  const margin = 22;
+  const contentWidth = pageWidth - 2 * margin;
+  let y = 26;
 
-  // Helper function to add text with automatic line wrapping
-  const addText = (text: string, fontSize: number, isBold: boolean = false, maxWidth?: number, xPos?: number) => {
-    doc.setFontSize(fontSize);
-    doc.setFont('helvetica', isBold ? 'bold' : 'normal');
-    
-    const effectiveWidth = maxWidth || pageWidth - 2 * margin;
-    const lines = doc.splitTextToSize(text, effectiveWidth);
-    
+  const checkPage = (needed = 12) => {
+    if (y + needed > pageHeight - margin) {
+      doc.addPage();
+      y = 26;
+    }
+  };
+
+  const space = (mm: number) => { y += mm; };
+
+  const style = (size: number, weight: 'normal' | 'bold', r: number, g: number, b: number) => {
+    doc.setFontSize(size);
+    doc.setFont('helvetica', weight);
+    doc.setTextColor(r, g, b);
+  };
+
+  const wrappedText = (text: string, x: number, maxWidth: number, lineHeight: number) => {
+    const lines = doc.splitTextToSize(text, maxWidth);
     lines.forEach((line: string) => {
-      // Check if we need a new page
-      if (yPosition > doc.internal.pageSize.getHeight() - 20) {
-        doc.addPage();
-        yPosition = 20;
-      }
-      doc.text(line, xPos !== undefined ? xPos : margin, yPosition);
-      yPosition += fontSize * 0.5;
+      checkPage(lineHeight + 2);
+      doc.text(line, x, y);
+      y += lineHeight;
     });
   };
 
-  const addSpace = (space: number = 5) => {
-    yPosition += space;
+  const sectionHeading = (title: string) => {
+    checkPage(16);
+    style(10.5, 'bold', 25, 25, 25);
+    doc.text(title, margin, y);
+    y += 4;
+    doc.setDrawColor(210, 210, 210);
+    doc.setLineWidth(0.3);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 5;
   };
 
-  // Header - Two column layout
-  const headerStartY = yPosition;
-  
-  // Left column - Name, Title, Location
-  doc.setFontSize(24);
-  doc.setFont('helvetica', 'bold');
-  doc.text(bio.name, margin, yPosition);
-  yPosition += 24 * 0.5;
-  
-  // Reduce gap by 4px (was 3, now -1)
-  addSpace(-1);
-  
-  doc.setFontSize(12);
-  doc.setFont('helvetica', 'normal');
-  doc.text(bio.tagline, margin, yPosition);
-  yPosition += 12 * 0.5;
-  
-  addSpace(2);
-  doc.setFontSize(10);
-  doc.text('London, UK', margin, yPosition);
-  
-  // Right column - Contact info (aligned to right)
-  const rightColumnX = pageWidth - margin;
-  let contactY = headerStartY;
-  
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  
-  // Website
-  const websiteText = 'www.damilolaodulesi.com';
-  const websiteWidth = doc.getTextWidth(websiteText);
-  doc.text(websiteText, rightColumnX - websiteWidth, contactY);
-  contactY += 10 * 0.5;
-  addSpace(2);
-  
-  // Email
-  const emailText = 'damilolaodulesi@gmail.com';
-  const emailWidth = doc.getTextWidth(emailText);
-  doc.text(emailText, rightColumnX - emailWidth, contactY);
-  contactY += 10 * 0.5;
-  addSpace(2);
-  
-  // LinkedIn
-  const linkedinText = 'linkedin.com/in/damilola-odulesi-7271a816a';
-  const linkedinWidth = doc.getTextWidth(linkedinText);
-  doc.text(linkedinText, rightColumnX - linkedinWidth, contactY);
-  contactY += 10 * 0.5;
-  addSpace(2);
-  
-  // Behance
-  const behanceText = 'behance.net/damilolaodulesi';
-  const behanceWidth = doc.getTextWidth(behanceText);
-  doc.text(behanceText, rightColumnX - behanceWidth, contactY);
-  
-  // Move yPosition past the header section
-  yPosition += 10 * 0.5;
-  addSpace(3);
+  // ── Header ───────────────────────────────────────────────────────────────
+  style(24, 'bold', 15, 15, 15);
+  doc.text(bio.name, margin, y);
+  y += 9;
 
-  // Horizontal line
-  doc.setDrawColor(200, 200, 200);
-  doc.line(margin, yPosition, pageWidth - margin, yPosition);
-  addSpace(8);
+  style(11, 'normal', 90, 90, 90);
+  doc.text(bio.tagline, margin, y);
+  y += 5.5;
 
-  // Professional Summary
-  addText('PROFESSIONAL SUMMARY', 14, true);
-  addSpace(2);
-  addText(bio.fullBio, 10);
-  addSpace(4);
+  style(9.5, 'normal', 120, 120, 120);
+  doc.text('London, UK', margin, y);
 
-  // Experience Section
-  addText('EXPERIENCE', 14, true);
-  addSpace(2);
+  // Right-aligned contact info
+  const contacts = [
+    'www.damilolaodulesi.com',
+    'damilolaodulesi@gmail.com',
+    'linkedin.com/in/damilola-odulesi',
+  ];
+  style(9, 'normal', 90, 90, 90);
+  let contactY = 26;
+  contacts.forEach(text => {
+    const w = doc.getTextWidth(text);
+    doc.text(text, pageWidth - margin - w, contactY);
+    contactY += 5;
+  });
+
+  y += 9;
+
+  // Header divider
+  doc.setDrawColor(170, 170, 170);
+  doc.setLineWidth(0.5);
+  doc.line(margin, y, pageWidth - margin, y);
+  space(10);
+
+  // ── Professional summary ─────────────────────────────────────────────────
+  sectionHeading('Professional summary');
+  style(10, 'normal', 65, 65, 65);
+  wrappedText(bio.fullBio, margin, contentWidth, 5.2);
+  space(10);
+
+  // ── Experience ───────────────────────────────────────────────────────────
+  sectionHeading('Experience');
 
   resume.experience.forEach((job, index) => {
-    addText(job.title, 12, true);
-    addSpace(1);
-    addText(`${job.company} | ${job.location}`, 10);
-    addSpace(1);
-    addText(job.period, 10);
-    addSpace(2);
-    
-    job.description.forEach((item) => {
-      addText(`• ${item}`, 10);
-      addSpace(1);
+    checkPage(22);
+
+    // Title (left) + Period (right) on same line
+    style(11, 'bold', 25, 25, 25);
+    doc.text(job.title, margin, y);
+    style(9, 'normal', 130, 130, 130);
+    const periodW = doc.getTextWidth(job.period);
+    doc.text(job.period, pageWidth - margin - periodW, y);
+    y += 5.5;
+
+    style(10, 'normal', 90, 90, 90);
+    doc.text(`${job.company}  ·  ${job.location}`, margin, y);
+    y += 7;
+
+    style(10, 'normal', 65, 65, 65);
+    job.description.forEach(item => {
+      wrappedText(`• ${item}`, margin + 3, contentWidth - 3, 5);
+      space(1.5);
     });
-    
+
     if (index < resume.experience.length - 1) {
-      addSpace(2);
+      space(5);
+      doc.setDrawColor(225, 225, 225);
+      doc.setLineWidth(0.2);
+      doc.line(margin, y, pageWidth - margin, y);
+      space(7);
     }
   });
 
-  addSpace(4);
+  space(10);
 
-  // Education Section
-  addText('EDUCATION', 14, true);
-  addSpace(2);
+  // ── Education ────────────────────────────────────────────────────────────
+  sectionHeading('Education');
 
   resume.education.forEach((edu, index) => {
-    addText(edu.degree, 12, true);
-    addSpace(1);
-    addText(edu.school, 10);
-    addSpace(1);
-    addText(edu.period, 10);
-    addSpace(1);
-    addText(edu.description, 10);
+    checkPage(18);
+
+    style(11, 'bold', 25, 25, 25);
+    doc.text(edu.degree, margin, y);
+    style(9, 'normal', 130, 130, 130);
+    const periodW = doc.getTextWidth(edu.period);
+    doc.text(edu.period, pageWidth - margin - periodW, y);
+    y += 5.5;
+
+    style(10, 'normal', 90, 90, 90);
+    doc.text(edu.school, margin, y);
+    y += 5;
+
+    style(10, 'normal', 110, 110, 110);
+    doc.text(edu.description, margin, y);
+
     if (index < resume.education.length - 1) {
-      addSpace(2);
+      space(8);
     }
   });
 
-  addSpace(4);
+  space(10);
 
-  // Skills Section
-  addText('SKILLS & EXPERTISE', 14, true);
-  addSpace(2);
-  const skillsText = bio.skills.map(s => s.name).join(' • ');
-  addText(skillsText, 10);
-  addSpace(4);
+  // ── Skills & expertise ───────────────────────────────────────────────────
+  sectionHeading('Skills & expertise');
+  style(10, 'normal', 65, 65, 65);
+  wrappedText(bio.skills.map(s => s.name).join('  ·  '), margin, contentWidth, 5.2);
+  space(10);
 
-  // Tools Section
-  addText('TOOLS & TECHNOLOGIES', 14, true);
-  addSpace(2);
-  const toolsText = bio.tools.join(' • ');
-  addText(toolsText, 10);
-  addSpace(4);
+  // ── Tools & technologies ─────────────────────────────────────────────────
+  sectionHeading('Tools & technologies');
+  style(10, 'normal', 65, 65, 65);
+  wrappedText(bio.tools.join('  ·  '), margin, contentWidth, 5.2);
+  space(10);
 
-  // Achievements Section
-  addText('ACHIEVEMENTS & RECOGNITION', 14, true);
-  addSpace(2);
-  resume.achievements.forEach((achievement, index) => {
-    addText(`• ${achievement}`, 10);
-    if (index < resume.achievements.length - 1) {
-      addSpace(1);
-    }
+  // ── Achievements ─────────────────────────────────────────────────────────
+  sectionHeading('Achievements');
+  style(10, 'normal', 65, 65, 65);
+  resume.achievements.forEach(item => {
+    wrappedText(`• ${item}`, margin + 3, contentWidth - 3, 5);
+    space(1.5);
   });
 
-  // Save the PDF
   doc.save('Damilola_Odulesi_Resume.pdf');
 }
