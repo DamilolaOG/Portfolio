@@ -51,7 +51,7 @@ export function HomePage() {
         />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full" style={{ marginTop: '106px' }}> {/* Increased from mt-[94px] to 106px (94 + 12) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full mt-[90px] lg:mt-[106px]"> {/* Increased from mt-[94px] to 106px (94 + 12) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

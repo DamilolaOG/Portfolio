@@ -24,7 +24,7 @@ export function ProjectsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="pt-32 pb-20"
+          className="pt-28 lg:pt-32 pb-20"
         >
           <h1 className="text-neutral-900">Projects</h1>
         </motion.div>
